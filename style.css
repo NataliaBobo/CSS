@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(194, 143, 67);
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;
+  position: absolute;
+
+}
+button{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(226, 153, 153);
+    color: rgb(28, 37, 10);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+}
+button:hover{
+   animation: colorChange is ease infinite;
+    transform: rotate(5deg);
+}
+
+#animateimage{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transform: translateX(0);
+    animation: colorChange 2s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes kitty{
+    0%{transform: translateX(0);}
+    50%{transform: translateX(50px);}
+    100%{transform: translateX(0);}
+}
+.kitty-animations{
+    animation: kitty 2s infinite;
+    animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
